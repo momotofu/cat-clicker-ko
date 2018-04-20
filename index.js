@@ -7,7 +7,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/js/:path', (req, res) => {
-  res.sendFile(path.join(`${__dirname}/js/${req.params.path}`))
+  const filePath = decodeURI(req.params.path)
+  res.sendFile(path.join(`${__dirname}${filePath}`))
 })
 
 app.get('/cats', (req, res) => {

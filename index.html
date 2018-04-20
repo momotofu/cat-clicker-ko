@@ -16,7 +16,19 @@
           </li>
         </ul>
     </div>
-    <script src="/js/knockout-3.2.0.js"></script>
-    <script src="/js/app.js"></script>
+    <script>
+      const knockOut = document.createElement("script")
+      const jQuery = document.createElement("script")
+      const app = document.createElement("script")
+      const basePath = '/js/'
+
+      knockOut.src = basePath + encodeURIComponent('/node_modules/knockout/build/output/knockout-latest.js')
+      jQuery.src = basePath + encodeURIComponent('/node_modules/jquery/dist/jquery.min.js')
+      app.src = basePath + encodeURIComponent('/js/app.js')
+
+      document.body.appendChild(knockOut);
+      document.body.appendChild(jQuery);
+      document.body.appendChild(app);
+    </script>
 </body>
 </html>

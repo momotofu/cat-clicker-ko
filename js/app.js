@@ -1,3 +1,5 @@
+const ko = require('knockout')
+
 const CatModel = function(data) {
   // attributes
   this.name = ko.observable(data.name);
