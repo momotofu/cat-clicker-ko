@@ -1,4 +1,4 @@
-const Model = function() {
+const CatModel = function() {
   // attributes
   this.name = ko.observable('TigerLily');
   this.url = ko.observable('https://images.duckduckgo.com/iu/?u=http%3A%2F%2F3.bp.blogspot.com%2F-ZHnphGtqBVI%2FTfryjXblbSI%2FAAAAAAAAEO4%2FXJb3DAuE94U%2Fs1600%2Fcat4.jpg&f=1');
@@ -31,7 +31,7 @@ const Model = function() {
 }
 
 const ViewModel = function() {
-  this.currentCat = ko.observable( new Model())
+  this.currentCat = ko.observable( new CatModel())
   this.wasClicked = function() {
     const cur = this.currentCat().clickCount() + 1
     this.currentCat().clickCount(cur)
