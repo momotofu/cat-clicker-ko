@@ -33,8 +33,8 @@ const CatModel = function() {
 const ViewModel = function() {
   this.currentCat = ko.observable( new CatModel())
   this.wasClicked = function() {
-    const cur = this.currentCat().clickCount() + 1
-    this.currentCat().clickCount(cur)
+    const cur = this.clickCount() + 1
+    this.clickCount(cur)
   }
 }
 
