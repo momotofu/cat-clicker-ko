@@ -31,10 +31,11 @@ const CatModel = function() {
 }
 
 const ViewModel = function() {
+  const self = this
   this.currentCat = ko.observable( new CatModel())
   this.wasClicked = function() {
-    const cur = this.clickCount() + 1
-    this.clickCount(cur)
+    const cur = self.clickCount() + 1
+    self.clickCount(cur)
   }
 }
 
