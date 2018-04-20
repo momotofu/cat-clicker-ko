@@ -1,15 +1,9 @@
-const CatModel = function() {
+const CatModel = function(data) {
   // attributes
-  this.name = ko.observable('TigerLily');
-  this.url = ko.observable('https://images.duckduckgo.com/iu/?u=http%3A%2F%2F3.bp.blogspot.com%2F-ZHnphGtqBVI%2FTfryjXblbSI%2FAAAAAAAAEO4%2FXJb3DAuE94U%2Fs1600%2Fcat4.jpg&f=1');
-  this.clickCount = ko.observable(0);
-  this.nickNames = ko.observableArray([
-    {name: 'TigerLily'},
-    {name: 'Jessie'},
-    {name: 'Juniper'},
-    {name: 'Crisper'},
-    {name: 'Krew'}
-  ])
+  this.name = ko.observable(data.name);
+  this.url = ko.observable(data.url);
+  this.clickCount = ko.observable(data.clickCount);
+  this.nickNames = ko.observableArray(data.nickNames)
 
   // bindings
   this.level = ko.computed(function() {
@@ -32,10 +26,23 @@ const CatModel = function() {
 
 const ViewModel = function() {
   const self = this
-  this.currentCat = ko.observable( new CatModel())
+
+  this.currentCat = ko.observable( new CatModel({
+    name: 'TigerLily',
+    url: 'https://images.duckduckgo.com/iu/?u=http%3A%2F%2F3.bp.blogspot.com%2F-ZHnphGtqBVI%2FTfryjXblbSI%2FAAAAAAAAEO4%2FXJb3DAuE94U%2Fs1600%2Fcat4.jpg&f=1',
+    clickCount: 0,
+    nickNames: [
+      {name: 'TigerLily'},
+      {name: 'Jessie'},
+      {name: 'Juniper'},
+      {name: 'Crisper'},
+      {name: 'Krew'}
+    ]
+  }))
+
   this.wasClicked = function() {
-    const cur = self.clickCount() + 1
-    self.clickCount(cur)
+    const cur = self.currentCat().clickCount() + 1
+    self.currentCat().clickCount(cur)
   }
 }
 
