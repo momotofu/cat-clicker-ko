@@ -18,6 +18,8 @@
   "homepage": "https://github.com/momotofu/cat-clicker-ko#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "knockout": "^3.4.2",
     "npm": "^5.8.0"
   }
 }
