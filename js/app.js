@@ -28,6 +28,9 @@ const Model = function() {
     }
   }, this)
 
+}
+
+const ViewModel = function() {
   this.wasClicked = function() {
     const cur = this.clickCount() + 1
     this.clickCount(cur)
@@ -35,3 +38,4 @@ const Model = function() {
 }
 
 ko.applyBindings(new Model)
+
