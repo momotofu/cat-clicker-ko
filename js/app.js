@@ -1,5 +1,3 @@
-const ko = require('knockout')
-
 const CatModel = function(data) {
   // attributes
   this.name = ko.observable(data.name);
@@ -47,6 +45,6 @@ const ViewModel = function() {
     self.currentCat().clickCount(cur)
   }
 }
+console.log('ran')
 
 ko.applyBindings(new ViewModel)
-

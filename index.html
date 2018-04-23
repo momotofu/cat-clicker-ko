@@ -27,6 +27,10 @@
       jQuery.src = basePath + encodeURIComponent('/node_modules/jquery/dist/jquery.min.js')
       app.src = basePath + encodeURIComponent('/js/app.js')
 
+      knockOut.async = false
+      jQuery.async = false
+      app.async = false
+
       document.body.appendChild(knockOut);
       document.body.appendChild(jQuery);
       document.body.appendChild(app);
