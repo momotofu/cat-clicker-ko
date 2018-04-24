@@ -25,10 +25,12 @@
       const app = document.createElement("script")
       const basePath = '/js/'
 
+      // set script src
       knockOut.src = basePath + encodeURIComponent('/node_modules/knockout/build/output/knockout-latest.js')
       jQuery.src = basePath + encodeURIComponent('/node_modules/jquery/dist/jquery.min.js')
       app.src = basePath + encodeURIComponent('/js/app.js')
 
+      // scripts are dependent upon eachother, thus async = false
       knockOut.async = false
       jQuery.async = false
       app.async = false
