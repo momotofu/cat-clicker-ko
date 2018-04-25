@@ -29,7 +29,7 @@ app.get('/cats', (req, res) => {
       {
         name: 'TigerLilyClone',
         url: 'https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fi.amz.mshcdn.com%2FJ0Rb3T_X0TMMgqUldzTIdlliIlE%3D%2F950x534%2Fhttps%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F271660%2F4c300cabe1214e45bc188cc638b8081b.png&f=1',
-        clickCount: 0,
+        clickCount: 3,
         nickNames: [
           {name: 'Vamp'},
           {name: 'Veer'},
@@ -41,7 +41,7 @@ app.get('/cats', (req, res) => {
       {
         name: 'TigerLilyImposter',
         url: 'https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fi.amz.mshcdn.com%2Fzy65wibIKGJwrQ3LlrTIKPGfDoE%3D%2F1200x630%2F2017%252F11%252F12%252F85%252F0cb95ccbac6441e7a30fb7d1d01b094d.bc1ee.png&f=1',
-        clickCount: 0,
+        clickCount: 2,
         nickNames: [
           {name: 'Joe'},
           {name: 'Jordan'},
